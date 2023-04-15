@@ -1,0 +1,57 @@
+.mt-1 {
+  margin-left: auto!important;
+  margin-right: 40px;
+}
+
+
+.album__title{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.album__btn{
+    display: flex;
+    width: 100%;
+}
+.album__albums{
+    margin-top: 70px;
+   padding-left: 0;
+
+}
+.album__album{
+    height:650px;
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+.album__album:not(:last-child){
+    border-bottom: 1px solid rgb(7, 7, 7);
+} 
+.album__album img{
+    margin: auto 80px;
+    width: 470px;
+    height: 470px;
+    flex: 30%;
+}
+.album__description{
+    margin-top: 220px;
+    text-align: center;
+    flex: 70%;
+}
+.album__description h2{
+   font-size: 45px;
+   font-weight: lighter;
+}
+.album__description p{
+   font-size: 20px;
+   margin-top: 30px ;
+}
+.album__description button{
+    margin-top: 25px;
+   padding: 13px 40px;
+   border-radius: 15px;
+   background-color: white;
+   font-weight: lighter;
+   font-size: 18px;
+   border: 1px solid  rgb(64, 64, 64);
+}

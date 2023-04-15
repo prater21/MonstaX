@@ -11,11 +11,12 @@ import Shop from './components/pages/Shop';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='MonstaX/' element={<Layout />}>
-      <Route path='' element={<Home />} />
-      <Route path='album' element={<Album />} loader={loader} />
-      <Route path='album/:id' element={<AlbumDetail />} />
-      <Route path='shop' element={<Shop />} />
+    <Route path='/MonstaX' element={<Layout />}>
+      <Route path='/' element={<Home />} />
+      <Route path='/album' element={<Album />} loader={loader} />
+      <Route path='/album/:id' element={<AlbumDetail />} />
+      <Route path='/shop' element={<Shop />} />
+      <Route path='*' element={<Home />} />
     </Route>
   )
 )

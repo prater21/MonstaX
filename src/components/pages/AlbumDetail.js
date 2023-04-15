@@ -21,22 +21,22 @@ const AlbumDetail = () => {
     return (<>
         {album && < div className="albumDetail" >
             <div className="albumDetail__main">
-                <img src={`/imgs/albums/${album.id}.jpeg`} alt="" />
+                <img src={`./imgs/albums/${album.id}.jpeg`} alt="" />
                 <div className="albumDetail__mainDetail">
                     <h2>{album.title}</h2>
                     <p>발매일 : {album.release}</p>
                     <hr className="albumDetail__hr" />
                     <div className="albumDetail__icons">
                         <div className="albumDetail__icon">
-                            <img src="/imgs/icon/youtubemusicIcon.png" onClick={() => { goToHandler(album.links.youtubeMusic) }} alt="" />
+                            <img src="./imgs/icon/youtubemusicIcon.png" onClick={() => { goToHandler(album.links.youtubeMusic) }} alt="" />
                             <p>youtube music</p>
                         </div>
                         <div className="albumDetail__icon">
-                            <img src="/imgs/icon/spotifyIcon.png" onClick={() => { goToHandler(album.links.spotify) }} alt="" />
+                            <img src="./imgs/icon/spotifyIcon.png" onClick={() => { goToHandler(album.links.spotify) }} alt="" />
                             <p>spotify</p>
                         </div>
                         <div className="albumDetail__icon">
-                            <img src="/imgs/icon/melonIcon.png" onClick={() => { goToHandler(album.links.melon) }} alt="" />
+                            <img src="./imgs/icon/melonIcon.png" onClick={() => { goToHandler(album.links.melon) }} alt="" />
                             <p>melon</p>
                         </div>
                     </div>

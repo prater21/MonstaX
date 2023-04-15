@@ -28,7 +28,7 @@ const Layout = () => {
 
                 // </swiper-container>
                 < div className="body__img">
-                    <img src="/imgs/home.jpeg" alt='' />
+                    <img src="./imgs/home.jpeg" alt='' />
                 </div>
             }
             <Navbar bg="dark" variant="dark" sticky="top" fixed='bottom' expand="lg">

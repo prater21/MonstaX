@@ -46,7 +46,7 @@ const Album = () => {
                         {showAlbums.slice(0).reverse().map((album, index) => {
                             if (index % 2 === 0)
                                 return <li className="album__album" key={album.id}>
-                                    <img src={`/imgs/albums/${album.id}.jpeg`} alt="" />
+                                    <img src={`./imgs/albums/${album.id}.jpeg`} alt="" />
                                     <div className="album__description">
                                         <h2>{album.title}</h2>
                                         <p>{album.release}</p>
@@ -64,7 +64,7 @@ const Album = () => {
                                             <button>Detail</button>
                                         </Link>
                                     </div>
-                                    <img src={`/imgs/albums/${album.id}.jpeg`} alt="" />
+                                    <img src={`./imgs/albums/${album.id}.jpeg`} alt="" />
                                 </li>
                         })}
                     </ul>}

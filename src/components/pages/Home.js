@@ -22,14 +22,14 @@ const Home = () => {
             <ul className="home__members">
                 {Members.map(member =>
                     <li key={member.id} className="home__member">
-                        <img className="home__memImg" src={`/imgs/members/${member.id}.jpg`} width={"180px"} onClick={() => { onClickImg(member) }} alt={member.name} />
+                        <img className="home__memImg" src={`./imgs/members/${member.id}.jpg`} width={"180px"} onClick={() => { onClickImg(member) }} alt={member.name} />
                         <p className="home__memTitle"> {member.stageName}</p>
                     </li>)}
             </ul>
 
             {showMem && <div className="home__mainMem">
                 <div className="home__curMem">
-                    <img className="home__curMemImg" src={`/imgs/members/${showMem.id}_profile.jpg`} width={"180px"} alt={showMem.stageName} />
+                    <img className="home__curMemImg" src={`./imgs/members/${showMem.id}_profile.jpg`} width={"180px"} alt={showMem.stageName} />
                     <div className="home__curmemProfile">
                         <h1>{showMem.stageName}</h1>
                         <p><span>본명 : </span>{showMem.name}</p>
@@ -45,7 +45,7 @@ const Home = () => {
                     <ul className="home__curMemAlbums">
                         {showMem.album.map(album => (
                             <li className="home__curMemAlbum" key={album.id}>
-                                <img src={`/imgs/albums/${album.imgSrc}`} alt=""></img>
+                                <img src={`./imgs/albums/${album.imgSrc}`} alt=""></img>
                                 <p>{album.title}</p>
                             </li>
                         ))}
@@ -56,7 +56,7 @@ const Home = () => {
                     <ul className="home__curMemBroads">
                         {showMem.broadcast.map(broadcast => (
                             <li className="home__curMemBroad" key={broadcast.id}>
-                                <img src={`/imgs/shows/${broadcast.imgSrc}`} alt=""></img>
+                                <img src={`./imgs/shows/${broadcast.imgSrc}`} alt=""></img>
                                 <p>{broadcast.title}</p>
                             </li>
                         ))}
@@ -78,23 +78,23 @@ const Home = () => {
                         <h2> Recent Album</h2>
                         <div className="home__albums">
                             <div className="home__album">
-                                <img src="/imgs/albums/mini_12.jpeg" alt="mini_12" />
+                                <img src="./imgs/albums/mini_12.jpeg" alt="mini_12" />
                                 <p>REASON</p>
                             </div>
                             <div className="home__album">
-                                <img src="/imgs/albums/mini_11.jpeg" alt="mini_11" />
+                                <img src="./imgs/albums/mini_11.jpeg" alt="mini_11" />
                                 <p>SHAPE of LOVE</p>
                             </div>
                             <div className="home__album">
-                                <img src="/imgs/albums/full_usa_2.jpeg" alt="mini_11" />
+                                <img src="./imgs/albums/full_usa_2.jpeg" alt="mini_11" />
                                 <p>The Dreaming</p>
                             </div>
                             <div className="home__album">
-                                <img src="/imgs/albums/mini_10.jpeg" alt="mini_11" />
+                                <img src="./imgs/albums/mini_10.jpeg" alt="mini_11" />
                                 <p>NO LIMIT</p>
                             </div>
                             <div className="home__album">
-                                <img src="/imgs/albums/mini_9.jpeg" alt="mini_11" />
+                                <img src="./imgs/albums/mini_9.jpeg" alt="mini_11" />
                                 <p>One Of A Kind</p>
                             </div>
                         </div>

@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 import "./AlbumDetail.css"
 import { useEffect, useState } from "react";
-import Carousel from 'react-bootstrap/Carousel';
 
 
 const AlbumDetail = () => {
@@ -21,35 +20,36 @@ const AlbumDetail = () => {
     return (<>
         {album && < div className="albumDetail" >
             <div className="albumDetail__main">
-                <img src={`./imgs/albums/${album.id}.jpeg`} alt="" />
+                <img src={process.env.PUBLIC_URL + `/imgs/albums/${album.id}.jpeg`} alt="" />
                 <div className="albumDetail__mainDetail">
                     <h2>{album.title}</h2>
                     <p>발매일 : {album.release}</p>
                     <hr className="albumDetail__hr" />
                     <div className="albumDetail__icons">
                         <div className="albumDetail__icon">
-                            <img src="./imgs/icon/youtubemusicIcon.png" onClick={() => { goToHandler(album.links.youtubeMusic) }} alt="" />
+                            <img src={process.env.PUBLIC_URL + "/imgs/icon/youtubemusicIcon.png"} onClick={() => { goToHandler(album.links.youtubeMusic) }} alt="" />
                             <p>youtube music</p>
                         </div>
                         <div className="albumDetail__icon">
-                            <img src="./imgs/icon/spotifyIcon.png" onClick={() => { goToHandler(album.links.spotify) }} alt="" />
+                            <img src={process.env.PUBLIC_URL + "/imgs/icon/spotifyIcon.png"} onClick={() => { goToHandler(album.links.spotify) }} alt="" />
                             <p>spotify</p>
                         </div>
                         <div className="albumDetail__icon">
-                            <img src="./imgs/icon/melonIcon.png" onClick={() => { goToHandler(album.links.melon) }} alt="" />
+                            <img src={process.env.PUBLIC_URL + "/imgs/icon/melonIcon.png"} onClick={() => { goToHandler(album.links.melon) }} alt="" />
                             <p>melon</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {album.description && <div className="albumDetail__description">
+            {album.description && <div className="albumDetail__contents">
                 <hr />
                 <h3>앨범 소개</h3>
                 <p>{album.description}</p>
             </div>}
-            <hr />
-            <div className="albumDetail__trackDetail">
+
+            <div className="albumDetail__contents">
+                <hr />
                 <h3>tracks</h3>
                 <ul className="albumDetail__tracks">
                     {album.tracks?.map((track, index) => (
@@ -64,38 +64,22 @@ const AlbumDetail = () => {
                 {album.youtube.mv && <div>
                     <hr />
                     <h3>MV</h3>
-                    <iframe src={album.youtube.mv} width="480" height="270" title={album + "mv"} frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe src={album.youtube.mv} width="320" height="180" title={album + "mv"} frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 }
-                {album.youtube.related?.src && <div>
+                {album.youtube.related?.src && <div className="albumDetail__contents">
                     <hr />
                     <h3>Related</h3>
                     <div className="albumDetail__videos">
                         {album.youtube.related.src.map(src => (
                             <div key={src}>
-                                <iframe src={src} width="480" height="270" title={src} frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe src={src} width="320" height="180" title={src} frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         ))}
                     </div>
                 </div>}
             </div>
-            {/* <div className="albumDetail__photos">
-                <h3>Concept Photo 1</h3>
-                <div className="albumDetail__photo">
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/0.jpeg"} />
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/1.jpeg"} />
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/2.jpeg"} />
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/3.jpeg"} />
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/4.jpeg"} />
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/5.jpeg"} />
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/6.jpeg"} />
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/7.jpeg"} />
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/8.jpeg"} />
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/9.jpeg"} />
-                    <img height="300px" src={"/imgs/albums/" + album.id + "/concept1/10.jpeg"} />
-                </div>
 
-            </div> */}
         </div >
 
         }

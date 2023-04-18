@@ -18,53 +18,14 @@ const Home = () => {
         <div className="home">
             <div className="home__title">
                 <h1 onClick={onClickTitle}>Monsta X</h1>
+                <ul className="home__members">
+                    {Members.map(member =>
+                        <li key={member.id} className="home__member">
+                            <img className="home__memImg" src={process.env.PUBLIC_URL + `/imgs/members/${member.id}.jpg`} onClick={() => { onClickImg(member) }} alt={member.name} />
+                            <p className="home__memTitle">{member.stageName}</p>
+                        </li>)}
+                </ul>
             </div>
-            <ul className="home__members">
-                {Members.map(member =>
-                    <li key={member.id} className="home__member">
-                        <img className="home__memImg" src={`./imgs/members/${member.id}.jpg`} width={"180px"} onClick={() => { onClickImg(member) }} alt={member.name} />
-                        <p className="home__memTitle"> {member.stageName}</p>
-                    </li>)}
-            </ul>
-
-            {showMem && <div className="home__mainMem">
-                <div className="home__curMem">
-                    <img className="home__curMemImg" src={`./imgs/members/${showMem.id}_profile.jpg`} width={"180px"} alt={showMem.stageName} />
-                    <div className="home__curmemProfile">
-                        <h1>{showMem.stageName}</h1>
-                        <p><span>본명 : </span>{showMem.name}</p>
-                        <p><span>출생 : </span>{showMem.birth}</p>
-                        <p><span>포지션 : </span>{showMem.position}</p>
-                        <hr />
-                        <p>{showMem.description}</p>
-                    </div>
-                </div>
-                <hr />
-                {showMem.album && <div className="home__maindiv">
-                    <h2>Album</h2>
-                    <ul className="home__curMemAlbums">
-                        {showMem.album.map(album => (
-                            <li className="home__curMemAlbum" key={album.id}>
-                                <img src={`./imgs/albums/${album.imgSrc}`} alt=""></img>
-                                <p>{album.title}</p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>}
-                {showMem.broadcast && <div className="home__maindiv">
-                    <h2>Broadcast </h2>
-                    <ul className="home__curMemBroads">
-                        {showMem.broadcast.map(broadcast => (
-                            <li className="home__curMemBroad" key={broadcast.id}>
-                                <img src={`./imgs/shows/${broadcast.imgSrc}`} alt=""></img>
-                                <p>{broadcast.title}</p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>}
-            </div>
-
-            }
             {!showMem &&
                 <div className="home__description">
                     <article className="home__mainText">
@@ -78,23 +39,23 @@ const Home = () => {
                         <h2> Recent Album</h2>
                         <div className="home__albums">
                             <div className="home__album">
-                                <img src="./imgs/albums/mini_12.jpeg" alt="mini_12" />
+                                <img src={process.env.PUBLIC_URL + "/imgs/albums/mini_12.jpeg"} alt="mini_12" />
                                 <p>REASON</p>
                             </div>
                             <div className="home__album">
-                                <img src="./imgs/albums/mini_11.jpeg" alt="mini_11" />
+                                <img src={process.env.PUBLIC_URL + "/imgs/albums/mini_11.jpeg"} alt="mini_11" />
                                 <p>SHAPE of LOVE</p>
                             </div>
                             <div className="home__album">
-                                <img src="./imgs/albums/full_usa_2.jpeg" alt="mini_11" />
+                                <img src={process.env.PUBLIC_URL + "/imgs/albums/full_usa_2.jpeg"} alt="mini_11" />
                                 <p>The Dreaming</p>
                             </div>
                             <div className="home__album">
-                                <img src="./imgs/albums/mini_10.jpeg" alt="mini_11" />
+                                <img src={process.env.PUBLIC_URL + "/imgs/albums/mini_10.jpeg"} alt="mini_11" />
                                 <p>NO LIMIT</p>
                             </div>
                             <div className="home__album">
-                                <img src="./imgs/albums/mini_9.jpeg" alt="mini_11" />
+                                <img src={process.env.PUBLIC_URL + "/imgs/albums/mini_9.jpeg"} alt="mini_11" />
                                 <p>One Of A Kind</p>
                             </div>
                         </div>
@@ -103,22 +64,62 @@ const Home = () => {
                         <h2>Youtube</h2>
                         <div className="home__youtubes">
                             <div className="home__youtube">
-                                <iframe width="480" height="270" src="https://www.youtube.com/embed/gXmdbn81N4g" title="[몬 먹어도 고] EP.7 몬제적 남자 part.1 (Proble&#39;MON&#39;tic Men)" frameorder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/gXmdbn81N4g" title="[몬 먹어도 고] EP.7 몬제적 남자 part.1 (Proble&#39;MON&#39;tic Men)" frameorder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div className="home__youtube">
                                 <iframe src="https://www.youtube.com/embed/94EKwyNMCts"
-                                    width="480" height="270" title="[몬채널][B] EP.361 MINHYUK NFL SUMMER" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+                                    title="[몬채널][B] EP.361 MINHYUK NFL SUMMER" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
                             </div>
                             <div className="home__youtube">
-                                <iframe src="https://www.youtube.com/embed/g3yLJjAfwfQ" width="480" height="270" title="[몬 먹어도 고] 아찔한 소개팅 (우정편) 비하인드 (A Shocking Blind Date (Friendship Edition) - Behind The Scenes)" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/g3yLJjAfwfQ" title="[몬 먹어도 고] 아찔한 소개팅 (우정편) 비하인드 (A Shocking Blind Date (Friendship Edition) - Behind The Scenes)" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
                             </div>
                             <div className="home__youtube">
-                                <iframe src="https://www.youtube.com/embed/IKfju-V-hR4" width="480" height="270" title="[몬 먹어도 고] EP.6 아찔한 소개팅 (우정편) part.2 (A Shocking Blind Date - Friendship Edition)" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube-nocookie.com/embed/IKfju-V-hR4" title="[몬 먹어도 고] EP.6 아찔한 소개팅 (우정편) part.2 (A Shocking Blind Date - Friendship Edition)" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
                 </div>
             }
+            {showMem &&
+                <div className="home__mainMem">
+                    <div className="home__curMem">
+                        <img className="home__curMemImg" src={process.env.PUBLIC_URL + `/imgs/members/${showMem.id}_profile.jpg`} width={"180px"} alt={showMem.stageName} />
+                        <div className="home__curmemProfile">
+                            <h1>{showMem.stageName}</h1>
+                            <p><span>본명 : </span>{showMem.name}</p>
+                            <p><span>출생 : </span>{showMem.birth}</p>
+                            <p><span>포지션 : </span>{showMem.position}</p>
+                            <hr />
+                            <p>{showMem.description}</p>
+                        </div>
+                    </div>
+                    <hr />
+                    {showMem.album && <div className="home__div">
+                        <h2>Album</h2>
+                        <ul className="home__curMemAlbums">
+                            {showMem.album.map(album => (
+                                <li className="home__curMemAlbum" key={album.id}>
+                                    <img src={process.env.PUBLIC_URL + `/imgs/albums/${album.imgSrc}`} alt=""></img>
+                                    <p>{album.title}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>}
+                    {showMem.broadcast && <div className="home__div">
+                        <h2>Broadcast </h2>
+                        <ul className="home__curMemBroads">
+                            {showMem.broadcast.map(broadcast => (
+                                <li className="home__curMemBroad" key={broadcast.id}>
+                                    <img src={process.env.PUBLIC_URL + `/imgs/shows/${broadcast.imgSrc}`} alt=""></img>
+                                    <p>{broadcast.title}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>}
+                </div>
+
+            }
+
 
         </div>
     )

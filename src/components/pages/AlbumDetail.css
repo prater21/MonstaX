@@ -1,131 +1,106 @@
-.albumDetail{
-    width: 80%;
-    margin: auto;
+.albumDetail {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
 }
-.albumDetail h3{
-    margin: 20px 0 ;
+.albumDetail h3 {
+  margin: 20px 0;
 }
-.albumDetail__main{
-    display: flex;
-    margin-bottom: 30px;
-}
-
-.albumDetail__main img{
-    height: 400px;
-    width:  400px;
+.albumDetail__main {
+  display: flex;
+  margin-bottom: 30px;
 }
 
-.albumDetail__mainDetail{
-    margin: 80px 0 0 80px ;
+.albumDetail__main img {
+  margin-left: 30px;
+  height: 350px;
+  width: 350px;
 }
 
-.albumDetail__mainDetail h2{
-    font-size: 45px;
-}
-.albumDetail__mainDetail > p{
-    font-size: 20px;
-    margin: 10px 0 0 5px;
+.albumDetail__mainDetail {
+  margin: 60px 0 0 80px;
 }
 
-.albumDetail__hr{
-    margin-top: 50px;
+.albumDetail__mainDetail h2 {
+  font-size: 2.5rem;
+}
+.albumDetail__mainDetail > p {
+  font-size: 1.2rem;
+  margin: 10px 0 0 5px;
 }
 
-.albumDetail__icons{
-   display: flex;
-}
-.albumDetail__icon img{
-    width: 40px;
-    height: 40px;
-    margin: 15px;
-    cursor: pointer;
-}
-.albumDetail__icon p{
-    width: 70px;
-    line-height: 15px;
-    text-align: center;
+.albumDetail__hr {
+  margin-top: 30px;
 }
 
-.albumDetail__description{
-    margin-top: 40px;
-    font-size: 18px;
-    margin-bottom: 30px;
+.albumDetail__icons {
+  display: flex;
+}
+.albumDetail__icon img {
+  width: 40px;
+  height: 40px;
+  margin: 15px;
+  cursor: pointer;
+}
+.albumDetail__icon p {
+  width: 70px;
+  line-height: 15px;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
-.albumDetail__tracks{
-    list-style: none;
-    width: 90%;
-    margin: auto;
-    padding: 0;
+.albumDetail__contents {
+  margin-top: 40px;
 }
 
-.albumDetail__trackTitle{
-    /* font-size: 20px; */
-    font-size: 1rem;
+.albumDetail__contents h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
 }
-.albumDetail__contents{
-    margin: auto;
-    justify-content: space-between;
+
+.albumDetail__tracks {
+  list-style: none;
+  width: 90%;
+  margin: auto;
+  padding: 0;
 }
-.albumDetail__videos{
-    margin-top: 20px;
-    overflow-x: scroll;
-    display: flex;
-    /* height: 300px; */
-    gap: 10px;
+
+.albumDetail__trackTitle {
+  font-size: 1rem;
+}
+
+.albumDetail__videos {
+  overflow-x: scroll;
+  display: flex;
+  gap: 8px;
 }
 .albumDetail__videos::-webkit-scrollbar {
-    width: 10px;
-  }
-.albumDetail__videos::-webkit-scrollbar-thumb {
-    background-color: #636770;
-    border-radius: 20px;
-    background-clip: padding-box;
-    border: 5px solid rgb(250, 250, 250);
-  }
-.albumDetail__videos::-webkit-scrollbar-track {
-   background-color: rgb(250, 250, 250);}
-.albumDetail__photo{
-    width: 100%;
-    overflow-x: scroll;display: flex;
-    gap: 5px;
+  width: 10px;
 }
-
-.albumDetail__photo::-webkit-scrollbar {
-    width: 10px;
-  }
-.albumDetail__photo::-webkit-scrollbar-thumb {
-    background-color: #636770;
-    border-radius: 20px;
-    background-clip: padding-box;
-    border: 5px solid rgb(250, 250, 250);
-  }
-.albumDetail__photo::-webkit-scrollbar-track {
-   background-color: rgb(250, 250, 250);
+.albumDetail__videos::-webkit-scrollbar-thumb {
+  background-color: #636770;
+  border-radius: 20px;
+  background-clip: padding-box;
+  border: 5px solid rgb(250, 250, 250);
+}
+.albumDetail__videos::-webkit-scrollbar-track {
+  background-color: rgb(250, 250, 250);
 }
 
 @media (max-width: 923px) {
-    .albumDetail{
-    width: 90%;
+  .albumDetail__main {
+    flex-direction: column;
+  }
+  .albumDetail__main > img {
+    width: 60%;
+    height: 60%;
     margin: auto;
-}
-    .albumDetail__main{
-        flex-direction: column;
-    }
-    .albumDetail__main >img{
-    width: 90%;
-    height: 90%;
-  margin: auto;
-}
+  }
 
-    .albumDetail__mainDetail{
-     margin: 40px 0 0 0px ;
-    }
-    .albumDetail__mainDetail hr{
-        display: none;
-    }
-    .albumDetail__contents iframe{
-      width: 320px;
-      height: 180px;
-    }
+  .albumDetail__mainDetail {
+    margin: 40px 0 0 10px;
+  }
+  .albumDetail__mainDetail hr {
+    display: none;
+  }
 }

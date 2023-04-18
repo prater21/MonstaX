@@ -1,0 +1,33 @@
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 80%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.swiper-slide img:hover {
+  opacity: 0.5;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #353535;
+}
+
+@media all and (max-width: 1000px) {
+  .swiper-slide img {
+    width: 100%;
+  }
+}

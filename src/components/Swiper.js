@@ -12,7 +12,6 @@ import "./Swiper.css"
 import SHOP_ITEMS from "../model/shopItems";
 
 const SwiperContent = (props) => {
-    console.log(props);
     return (
         <Swiper
             initialSlide="2"
@@ -30,9 +29,9 @@ const SwiperContent = (props) => {
             modules={[Navigation]}
             className="mySwiper"
         >
-            {SHOP_ITEMS[props.items].map(item => (
+            {SHOP_ITEMS[props.items].map((item, i) => (
                 <SwiperSlide key={item.id}>
-                    <img src={process.env.PUBLIC_URL + `/imgs/shop/${props.items}/${item.imgSrc}`} alt="" />
+                    <img src={process.env.PUBLIC_URL + `/imgs/shop/${item.imgSrc}`} alt="" onClick={() => { props.onClickHandler(props.items, i) }} />
                 </SwiperSlide>
             ))}
 

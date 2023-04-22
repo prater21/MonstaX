@@ -2,6 +2,7 @@ import Members from "../../model/members";
 import "./Home.css"
 import { useState } from "react";
 
+
 const Home = () => {
     const [showMem, setShowMem] = useState('');
 
@@ -76,6 +77,16 @@ const Home = () => {
                             <div className="home__youtube">
                                 <iframe src="https://www.youtube-nocookie.com/embed/IKfju-V-hR4" title="[몬 먹어도 고] EP.6 아찔한 소개팅 (우정편) part.2 (A Shocking Blind Date - Friendship Edition)" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
+                        </div>
+                    </div>
+
+                    <div className="home__div">
+                        <h2>Images</h2>
+                        <div className="home__imgs">
+                            <img className="home__img" src={process.env.PUBLIC_URL + `/imgs/homeImg/11.jpeg`} width={"180px"} alt={showMem.stageName} />
+                            <img className="home__img" src={process.env.PUBLIC_URL + `/imgs/homeImg/12.jpeg`} width={"180px"} alt={showMem.stageName} />
+                            <img className="home__img" src={process.env.PUBLIC_URL + `/imgs/homeImg/13.jpeg`} width={"180px"} alt={showMem.stageName} />
+                            <img className="home__img" src={process.env.PUBLIC_URL + `/imgs/homeImg/14.jpeg`} width={"180px"} alt={showMem.stageName} />
                         </div>
                     </div>
                 </div>

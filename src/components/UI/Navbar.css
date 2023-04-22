@@ -1,0 +1,14 @@
+.nav__cartIcon {
+  color: white;
+  font-size: 1.7rem;
+
+  margin-left: auto;
+  left: 90%;
+  position: fixed;
+}
+
+@media all and (max-width: 993px) {
+  .nav__cartIcon {
+    left: 70%;
+  }
+}

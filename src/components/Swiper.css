@@ -25,7 +25,7 @@
   color: #353535;
 }
 
-@media all and (max-width: 1023px) {
+@media all and (max-width: 768px) {
   .swiper-slide img {
     width: 120%;
   }

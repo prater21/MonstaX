@@ -19,7 +19,14 @@ const Home = () => {
         <div className="home">
             <div className="home__title">
                 <h1 onClick={onClickTitle}>Monsta X</h1>
-                <ul className="home__members">
+                <ul className="home__members_lg">
+                    {Members.map(member =>
+                        <li key={member.id} className="home__member">
+                            <img className="home__memImg" src={process.env.PUBLIC_URL + `/imgs/members/${member.id}.jpg`} onClick={() => { onClickImg(member) }} alt={member.name} />
+                            <p className="home__memTitle">{member.stageName}</p>
+                        </li>)}
+                </ul>
+                <ul className="home__members_sm">
                     {Members.map(member =>
                         <li key={member.id} className="home__member">
                             <img className="home__memImg" src={process.env.PUBLIC_URL + `/imgs/members/${member.id}.jpg`} onClick={() => { onClickImg(member) }} alt={member.name} />
@@ -59,6 +66,14 @@ const Home = () => {
                                 <img src={process.env.PUBLIC_URL + "/imgs/albums/mini_9.jpeg"} alt="mini_11" />
                                 <p>One Of A Kind</p>
                             </div>
+                            <div className="home__album">
+                                <img src={process.env.PUBLIC_URL + "/imgs/albums/full_jap_3.jpeg"} alt="mini_11" />
+                                <p>Flavors Of Love</p>
+                            </div>
+                            <div className="home__album">
+                                <img src={process.env.PUBLIC_URL + "/imgs/albums/full_3.jpeg"} alt="mini_11" />
+                                <p>Fatal Love</p>
+                            </div>
                         </div>
                     </div>
                     <div className="home__div">
@@ -87,6 +102,8 @@ const Home = () => {
                             <img className="home__img" src={process.env.PUBLIC_URL + `/imgs/homeImg/12.jpeg`} width={"180px"} alt={showMem.stageName} />
                             <img className="home__img" src={process.env.PUBLIC_URL + `/imgs/homeImg/13.jpeg`} width={"180px"} alt={showMem.stageName} />
                             <img className="home__img" src={process.env.PUBLIC_URL + `/imgs/homeImg/14.jpeg`} width={"180px"} alt={showMem.stageName} />
+                            <img className="home__img" src={process.env.PUBLIC_URL + `/imgs/homeImg/15.jpeg`} width={"180px"} alt={showMem.stageName} />
+                            <img className="home__img" src={process.env.PUBLIC_URL + `/imgs/homeImg/16.jpeg`} width={"180px"} alt={showMem.stageName} />
                         </div>
                     </div>
                 </div>

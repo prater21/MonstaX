@@ -88,7 +88,16 @@
   background-color: rgb(250, 250, 250);
 }
 
-@media (max-width: 923px) {
+@media (max-width: 1000px) {
+  .albumDetail {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 1000px;
+  }
+  .albumDetail__mainDetail h2 {
+    font-size: 2rem;
+  }
   .albumDetail__main {
     flex-direction: column;
   }
@@ -99,9 +108,12 @@
   }
 
   .albumDetail__mainDetail {
-    margin: 40px 0 0 10px;
+    margin: 40px 0 0 20px;
   }
   .albumDetail__mainDetail hr {
     display: none;
+  }
+  .albumDetail__icons {
+    display: flex;
   }
 }

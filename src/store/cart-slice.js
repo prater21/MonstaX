@@ -8,8 +8,8 @@ const cartSlice = createSlice({
         totalPrice: 0
     },
     reducers: {
+        // add item to cart
         addItem(state, action) {
-
             state.totalPrice += parseInt(action.payload.item.price * action.payload.item.quantity);
             const existingCartItemIndex = state.items.findIndex(
                 (item) => item.title === action.payload.item.title
@@ -23,12 +23,14 @@ const cartSlice = createSlice({
             }
 
         },
+        //delete item from cart
         deleteItem(state, action) {
             const title = action.payload.title;
             const updatedItems = state.items.find(item => item.title === title);
             state.totalPrice -= updatedItems.price * updatedItems.quantity;
             state.items = state.items.filter(item => item.title !== title);;
         },
+        // add item quantity by 1
         addQuantity(state, action) {
             const title = action.payload.title;
             const existingCartItemIndex = state.items.findIndex(
@@ -40,6 +42,7 @@ const cartSlice = createSlice({
             state.totalPrice += existingCartItem.price;
 
         },
+        // sub item quantity by 1
         subQuantity(state, action) {
             const title = action.payload.title;
             const existingCartItemIndex = state.items.findIndex(

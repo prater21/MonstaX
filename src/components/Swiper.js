@@ -1,11 +1,11 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+/**
+ * Swiper Component
+ */
 
-// Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import required modules
 import { Navigation } from "swiper";
 import "./Swiper.css"
 
@@ -22,10 +22,10 @@ const SwiperContent = (props) => {
             pagination={{
                 clickable: true,
             }}
-            // autoplay={{
-            //     delay: 2500,
-            //     disableOnInteraction: false,
-            // }}
+            autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+            }}
             modules={[Navigation]}
             className="mySwiper"
         >

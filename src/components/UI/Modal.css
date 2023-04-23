@@ -22,7 +22,7 @@
   max-height: 71%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1023px) {
   .modal__shop {
     width: 80%;
     left: 10%;

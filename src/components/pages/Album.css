@@ -43,11 +43,11 @@
   flex: 70%;
 }
 .album__description h2 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: lighter;
 }
 .album__description p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 30px;
 }
 .album__description button {
@@ -61,23 +61,25 @@
 }
 
 @media all and (max-width: 768px) {
+  .album {
+    width: 90%;
+  }
   .album__album {
     height: 300px;
-    min-width: 500px;
   }
   .album__album img {
-    margin: auto 60px;
+    margin: auto 30px;
     width: 200px;
     flex: 30%;
   }
   .album__description h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .album__description p {
-    font-size: 1rem;
-    margin-top: 20px;
+    font-size: 0.8rem;
+    margin-top: 10px;
   }
   .album__description button {
-    margin-top: 5px;
+    margin-top: 0px;
   }
 }

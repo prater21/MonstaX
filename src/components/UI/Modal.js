@@ -1,3 +1,7 @@
+/**
+ * Modal Component
+ */
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './Modal.css'
@@ -7,7 +11,6 @@ const Barkdrop = props => {
     return <div className='backdrop' onClick={props.closeModal} />
 }
 
-
 const ModalOverlay = props => {
     return (
         <div className='modal__shop'>
@@ -15,7 +18,6 @@ const ModalOverlay = props => {
         </div>
     )
 }
-
 
 const Modal = props => {
     return <React.Fragment>

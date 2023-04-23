@@ -1,3 +1,7 @@
+/**
+ *  shop items date
+ */
+
 const SHOP_ITEMS = {
     "best": [{
         id: "best1",

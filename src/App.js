@@ -1,5 +1,4 @@
 import { Route, createBrowserRouter, RouterProvider, createRoutesFromElements } from 'react-router-dom';
-import './App.css';
 import Layout from './components/UI/Layout';
 import Home from './components/pages/Home';
 import Album, { loader } from './components/pages/Album';

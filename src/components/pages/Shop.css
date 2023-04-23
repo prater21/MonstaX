@@ -156,12 +156,12 @@
     min-width: 85vw;
   }
   .shop_allItems img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
   }
   .shop_allItems {
     gap: 10px;
-    width: 100%;
+    width: 90%;
   }
   .shop__itemTitle {
     margin: 10px 0 5px 10px;

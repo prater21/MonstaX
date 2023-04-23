@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 import "./Cart.css"
 import Modal from "./Modal"
 import { useDispatch, useSelector } from "react-redux";

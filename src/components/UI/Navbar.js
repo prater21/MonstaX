@@ -1,29 +1,16 @@
+/**
+ *  NavBar Component
+ */
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "./Navbar.css"
-import { IoCartOutline } from "react-icons/io5";
-
-import { NavLink, useLocation } from 'react-router-dom';
-import { useState } from 'react';
-import Cart from './Cart';
+import { NavLink } from 'react-router-dom';
 
 
 const NavMain = () => {
-    const [showCartIcon, setShowCartIcon] = useState(false);
-    const [showCart, setShowCart] = useState(false);
-    const location = useLocation();
 
-    if (location.pathname === '/shop' && showCartIcon === false) {
-        setShowCartIcon(true);
-    }
-    else if (location.pathname !== '/shop' && showCartIcon === true) {
-        setShowCartIcon(false);
-    }
-
-    const closeCart = () => {
-        setShowCart(false);
-    }
     return <Navbar bg="dark" variant="dark" sticky="top" fixed='bottom' expand="lg">
         <Container>
             <NavLink to="/" className="nav__link">
@@ -43,8 +30,7 @@ const NavMain = () => {
                     <NavLink to="/shop" className="nav__link">Shop</NavLink>
                 </Nav>
             </Navbar.Collapse>
-            {showCartIcon && <IoCartOutline className='nav__cartIcon' onClick={() => { setShowCart(true) }}></IoCartOutline>}
-            {showCart && <Cart closeCart={closeCart} ></Cart>}
+
         </Container>
     </Navbar>
 }

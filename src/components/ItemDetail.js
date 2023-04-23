@@ -19,7 +19,9 @@ const ItemDetail = ({ addCartItem, closeModal, showAlert }) => {
     }
     // sub item quantity by 1
     const subQuantity = () => {
-        setItemQuantity(prev => { if (prev === 0) return 0; else prev -= 1; return prev; })
+        setItemQuantity(prev => {
+            if (prev <= 1) return 1; else prev -= 1; return prev;
+        })
     }
     // add item to cart
     const addCartHandler = () => {

@@ -1,4 +1,6 @@
-
+/**
+ * album page
+ */
 import "./Album.css"
 import { useEffect, useState } from "react"
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -40,45 +42,42 @@ const Album = () => {
                     <Dropdown.Item eventKey="EP" >미니앨범 (EP)</Dropdown.Item>
                 </DropdownButton>
             </div>
-            <div className="album__container">
-                {showAlbums &&
-                    <ul className="album__albums">
-                        {showAlbums.slice(0).reverse().map((album, index) => {
-                            if (index % 2 === 0)
-                                return <li className="album__album" key={album.id}>
-                                    <img src={process.env.PUBLIC_URL + `/imgs/albums/${album.id}.jpeg`} alt="" />
-                                    <div className="album__description">
-                                        <h2>{album.title}</h2>
-                                        <p>{album.release}</p>
-                                        <Link to={album.id} state={{ album: album }}>
-                                            <button>Detail</button>
-                                        </Link>
-                                    </div>
-                                </li>
-                            else
-                                return <li className="album__album" key={album.id}>
-                                    <div className="album__description">
-                                        <h2>{album.title}</h2>
-                                        <p>{album.release}</p>
-                                        <Link to={album.id} state={{ album: album }}>
-                                            <button>Detail</button>
-                                        </Link>
-                                    </div>
-                                    <img src={process.env.PUBLIC_URL + `/imgs/albums/${album.id}.jpeg`} alt="" />
-                                </li>
-                        })}
-                    </ul>}
-            </div>
+            {showAlbums &&
+                <ul className="album__albums">
+                    {showAlbums.slice(0).reverse().map((album, index) => {
+                        if (index % 2 === 0)
+                            return <li className="album__album" key={album.id}>
+                                <img src={process.env.PUBLIC_URL + `/imgs/albums/${album.id}.jpeg`} alt="" />
+                                <div className="album__description">
+                                    <h2>{album.title}</h2>
+                                    <p>{album.release}</p>
+                                    <Link to={album.id} state={{ album: album }}>
+                                        <button>Detail</button>
+                                    </Link>
+                                </div>
+                            </li>
+                        else
+                            return <li className="album__album" key={album.id}>
+                                <div className="album__description">
+                                    <h2>{album.title}</h2>
+                                    <p>{album.release}</p>
+                                    <Link to={album.id} state={{ album: album }}>
+                                        <button>Detail</button>
+                                    </Link>
+                                </div>
+                                <img src={process.env.PUBLIC_URL + `/imgs/albums/${album.id}.jpeg`} alt="" />
+                            </li>
+                    })}
+                </ul>}
         </div >
     )
 }
 
-
 export default Album;
 
+//fetch album data from firebase
 export async function loader() {
     const response = await fetch("https://monsta-x-a7d84-default-rtdb.firebaseio.com/albums.json")
-
     if (!response.ok) {
         console.log("Error")
     } else {

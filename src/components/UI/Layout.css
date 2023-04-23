@@ -44,4 +44,7 @@
   .body__img img {
     display: none;
   }
+  .body__container {
+    padding-bottom: 30px;
+  }
 }

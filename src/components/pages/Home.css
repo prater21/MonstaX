@@ -93,7 +93,7 @@
   text-align: center;
 }
 .home__youtubes {
-  height: 200px;
+  height: 210px;
 }
 .home__youtube iframe {
   border-radius: 3px;
@@ -150,6 +150,7 @@
 .home__curMemBroads {
   display: flex;
   list-style: none;
+  padding-left: 0;
   margin-top: 15px;
   text-align: center;
   gap: 15px;
@@ -190,18 +191,19 @@
     text-align: center;
   }
   .home__curmemProfile {
-    width: 90%;
+    width: 95%;
     margin: auto;
   }
   .home__curMemAlbum img {
     width: 130px;
   }
+  .home__curMemBroad img {
+    width: 130px;
+    height: 180px;
+  }
 }
 
 @media all and (max-width: 768px) {
-  .home {
-    width: 95%;
-  }
   .home__members_lg {
     display: none;
   }
@@ -214,9 +216,8 @@
     margin: auto;
     flex-wrap: wrap;
     gap: 18px;
-    width: 400px;
   }
   .home__memImg {
-    width: 120px;
+    width: 100px;
   }
 }

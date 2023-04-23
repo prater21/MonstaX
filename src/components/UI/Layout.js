@@ -35,18 +35,15 @@ const Layout = () => {
     return (
         <div className='body'>
             {onImg &&
-                // home main image
                 < div className="body__img">
                     <img src={process.env.PUBLIC_URL + "/imgs/home.jpeg"} alt='' />
                 </div>
             }
-            {/* nav bar */}
+
             <NavMain />
-            {/* cart icon */}
             {showCartIcon && <IoCartOutline className='nav__cartIcon' onClick={() => { setShowCart(true) }}></IoCartOutline>}
-            {/* cart component */}
             {showCart && <Cart closeCart={closeCart} ></Cart>}
-            {/* body content */}
+
             <div className='body__container'>
                 <Outlet />
             </div>

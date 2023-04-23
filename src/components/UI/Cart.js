@@ -1,5 +1,5 @@
 /**
- * 
+ *  cart component
  */
 import "./Cart.css"
 import Modal from "./Modal"
@@ -11,6 +11,8 @@ const Cart = (props) => {
     const cartItems = useSelector(state => state.cart.items)
     const cartTotalPrice = useSelector(state => state.cart.totalPrice)
     const dispatch = useDispatch();
+
+    //delete item from cart
     const deleteCartItems = (title) => {
         dispatch(cartActions.deleteItem({ title }));
     }

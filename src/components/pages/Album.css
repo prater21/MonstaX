@@ -21,6 +21,7 @@
 .album__albums {
   margin-top: 20px;
   padding-left: 0;
+  margin-bottom: 0;
 }
 .album__album {
   height: 500px;
@@ -58,22 +59,30 @@
   font-weight: lighter;
   font-size: 1rem;
   border: 1px solid rgb(64, 64, 64);
+  color: black;
 }
 
 @media all and (max-width: 768px) {
+  .mt-1 {
+    margin-right: 20px;
+  }
+
   .album {
-    width: 90%;
+    width: 95%;
+  }
+  .album__albums {
+    margin-top: 0;
   }
   .album__album {
-    height: 300px;
+    height: 250px;
   }
   .album__album img {
-    margin: auto 30px;
-    width: 200px;
+    margin: auto 20px;
+    width: 130px;
     flex: 30%;
   }
   .album__description h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .album__description p {
     font-size: 0.8rem;
@@ -81,5 +90,8 @@
   }
   .album__description button {
     margin-top: 0px;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    border-radius: 10px;
   }
 }

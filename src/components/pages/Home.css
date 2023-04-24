@@ -53,4 +53,7 @@
     flex-wrap: wrap;
     margin: auto;
   }
+  .home__memImg {
+    width: 100px;
+  }
 }

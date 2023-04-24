@@ -77,12 +77,12 @@
   }
   .album__album img {
     margin: auto 20px;
-    width: 150px;
+    width: 140px;
     flex: 30%;
   }
   .album__description h2 {
-    font-size: 1.4rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 400;
   }
   .album__description p {
     font-size: 0.9rem;

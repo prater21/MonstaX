@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/MonstaX/static/css/main.e197a50a.css",
-    "main.js": "/MonstaX/static/js/main.fdf8e76d.js",
+    "main.css": "/MonstaX/static/css/main.81ccf76e.css",
+    "main.js": "/MonstaX/static/js/main.712ab90c.js",
     "index.html": "/MonstaX/index.html",
-    "main.e197a50a.css.map": "/MonstaX/static/css/main.e197a50a.css.map",
-    "main.fdf8e76d.js.map": "/MonstaX/static/js/main.fdf8e76d.js.map"
+    "main.81ccf76e.css.map": "/MonstaX/static/css/main.81ccf76e.css.map",
+    "main.712ab90c.js.map": "/MonstaX/static/js/main.712ab90c.js.map"
   },
   "entrypoints": [
-    "static/css/main.e197a50a.css",
-    "static/js/main.fdf8e76d.js"
+    "static/css/main.81ccf76e.css",
+    "static/js/main.712ab90c.js"
   ]
 }

@@ -66,9 +66,8 @@
   .mt-1 {
     margin-right: 20px;
   }
-
   .album {
-    width: 95%;
+    width: 90%;
   }
   .album__albums {
     margin-top: 0;
@@ -78,19 +77,20 @@
   }
   .album__album img {
     margin: auto 20px;
-    width: 130px;
+    width: 150px;
     flex: 30%;
   }
   .album__description h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
   }
   .album__description p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 10px;
   }
   .album__description button {
     margin-top: 0px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     padding: 5px 10px;
     border-radius: 10px;
   }

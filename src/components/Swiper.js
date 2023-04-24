@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import "./Swiper.css"
 
 import SHOP_ITEMS from "../model/shopItems";
@@ -23,10 +23,10 @@ const SwiperContent = (props) => {
                 clickable: true,
             }}
             autoplay={{
-                delay: 2500,
+                delay: 2000,
                 disableOnInteraction: false,
             }}
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             className="mySwiper"
         >
             {SHOP_ITEMS[props.items].map((item, i) => (

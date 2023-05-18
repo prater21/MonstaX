@@ -1,7 +1,6 @@
 /**
  * home(index) page
  */
-
 import Members from "../../model/members";
 import HomeMain from "../HomeMain";
 import Member from "../Member";
@@ -12,14 +11,12 @@ import { useState } from "react";
 const Home = () => {
     const [showMem, setShowMem] = useState('');
 
-
     const onClickImg = (member) => {
         setShowMem(member);
     }
     const onClickTitle = () => {
         setShowMem('');
     }
-
 
     return (
         <div className="home">
@@ -35,8 +32,6 @@ const Home = () => {
             </div>
             {!showMem && <HomeMain />}
             {showMem && <Member showMem={showMem} />}
-
-
         </div>
     )
 }

@@ -19,7 +19,7 @@ const Member = ({ showMem }) => {
             </div>
         </div>
         <hr />
-        {showMem.album && <div className="home__div">
+        {showMem.album && <div className="home__curMemContent">
             <h2>Album</h2>
             <ul className="home__curMemAlbums">
                 {showMem.album.map(album => (
@@ -30,7 +30,7 @@ const Member = ({ showMem }) => {
                 ))}
             </ul>
         </div>}
-        {showMem.broadcast && <div className="home__div">
+        {showMem.broadcast && <div className="home__curMemContent">
             <h2>Broadcast </h2>
             <ul className="home__curMemBroads">
                 {showMem.broadcast.map(broadcast => (

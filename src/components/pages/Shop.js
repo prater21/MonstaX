@@ -19,6 +19,7 @@ const Shop = () => {
     const onClickHandler = (type, i) => {
         setAddCartItem(SHOP_ITEMS[type][i]);
         setShowModal(true);
+        document.body.style.overflow = "hidden";
     }
 
     //close modal
@@ -32,6 +33,7 @@ const Shop = () => {
     // close notice
     const closeAlert = () => {
         setShowAlert(false);
+        document.body.style.overflow = "scroll";
     }
 
     return (<div className="shop">

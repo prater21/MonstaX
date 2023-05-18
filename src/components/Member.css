@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  align-items: center;
 }
 
 .home__curMemImg {
@@ -34,6 +35,13 @@
   font-weight: bold;
 }
 
+.home__curMemContent{
+ margin: 0 20px;
+}
+.home__curMemContent > h2{
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
 .home__curMemAlbums,
 .home__curMemBroads {
   display: flex;

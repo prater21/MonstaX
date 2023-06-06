@@ -4,9 +4,11 @@
   margin-top: 50px;
   max-width: 1000px;
 }
+
 .albumDetail h3 {
   margin: 20px 0;
 }
+
 .albumDetail__main {
   display: flex;
   margin-bottom: 30px;
@@ -25,6 +27,7 @@
 .albumDetail__mainDetail h2 {
   font-size: 2.5rem;
 }
+
 .albumDetail__mainDetail > div > p {
   font-size: 1.2rem;
   margin: 10px 0 0 5px;
@@ -37,12 +40,14 @@
 .albumDetail__icons {
   display: flex;
 }
+
 .albumDetail__icon img {
   width: 40px;
   height: 40px;
   margin: 15px;
   cursor: pointer;
 }
+
 .albumDetail__icon p {
   width: 70px;
   line-height: 15px;
@@ -75,6 +80,7 @@
   display: flex;
   gap: 8px;
 }
+
 .albumDetail__videos::-webkit-scrollbar {
   width: 10px;
 }
@@ -95,12 +101,15 @@
     margin-top: 50px;
     max-width: 1000px;
   }
+
   .albumDetail__mainDetail h2 {
     font-size: 2rem;
   }
+
   .albumDetail__main {
     flex-direction: column;
   }
+  
   .albumDetail__main > img {
     width: 60%;
     height: 60%;
@@ -110,9 +119,11 @@
   .albumDetail__mainDetail {
     margin: 40px 0 0 20px;
   }
+
   .albumDetail__mainDetail hr {
     display: none;
   }
+  
   .albumDetail__icons {
     display: flex;
   }

@@ -1,7 +1,6 @@
 /**
  * main component (home page)
  */
-
 import "./HomeMain.css"
 
 const HomeMain = () => {

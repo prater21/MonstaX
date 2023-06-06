@@ -1,7 +1,6 @@
 /**
  * item detail component (shop page)
  */
-
 import Modal from "./UI/Modal";
 import { cartActions } from "../store/cart-slice";
 import { useState } from "react";
@@ -17,12 +16,14 @@ const ItemDetail = ({ addCartItem, closeModal, showAlert }) => {
     const addQuantity = () => {
         setItemQuantity(prev => { prev += 1; return prev; })
     }
+
     // sub item quantity by 1
     const subQuantity = () => {
         setItemQuantity(prev => {
             if (prev <= 1) return 1; else prev -= 1; return prev;
         })
     }
+
     // add item to cart
     const addCartHandler = () => {
         closeModal();

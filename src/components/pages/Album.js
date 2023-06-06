@@ -17,7 +17,7 @@ const Album = () => {
             setshowAlbums(albums);
         }
         else {
-            var result = albums.filter(value => value.types === item);
+            let result = albums.filter(value => value.types === item);
             setshowAlbums(result);
         }
 
@@ -42,6 +42,7 @@ const Album = () => {
                     <Dropdown.Item eventKey="EP" >미니앨범 (EP)</Dropdown.Item>
                 </DropdownButton>
             </div>
+
             {showAlbums &&
                 <ul className="album__albums">
                     {showAlbums.slice(0).reverse().map((album, index) => {
@@ -69,6 +70,7 @@ const Album = () => {
                             </li>
                     })}
                 </ul>}
+
         </div >
     )
 }

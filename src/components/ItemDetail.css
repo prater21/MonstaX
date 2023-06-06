@@ -4,25 +4,30 @@
   margin: 30px;
   margin-bottom: 40px;
 }
+
 .modal__closeBtn {
   margin-left: auto;
   cursor: pointer;
   margin-right: 30px;
 }
+
 .modal__addCart img {
   border: 1px solid rgb(110, 110, 110);
   border-radius: 10px;
   margin-left: 30px;
 }
+
 .modal__addCartMain {
   display: flex;
   justify-content: space-around;
 }
+
 .modal__addCartContent {
   width: 80%;
   margin-top: 10px;
   text-align: center;
 }
+
 .modal__addCartContent > p {
   font-size: 1.2rem;
 }
@@ -30,9 +35,11 @@
 .modal__addCartHr {
   display: none;
 }
+
 .modal__addQuantity {
   padding: 10px;
 }
+
 .modal__addQuantity span {
   border: 1px solid rgb(110, 110, 110);
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
@@ -51,6 +58,7 @@
   margin: 0 5px;
   padding: 2px 5px;
 }
+
 .modal__totalPrice p {
   margin-top: 5px;
   font-size: 1.2rem;
@@ -64,6 +72,7 @@
   padding: 5px 15px;
   color: aliceblue;
 }
+
 .modal__addCartBtn:hover {
   border: 1px solid rgb(140, 140, 140);
   background-color: rgb(140, 140, 140);
@@ -75,26 +84,32 @@
     display: flex;
     flex-direction: column;
   }
+  
   .modal__addCartMain {
     flex-direction: column;
     align-items: center;
   }
+
   .modal__addCart img {
     border: 1px solid rgb(110, 110, 110);
     border-radius: 10px;
     margin-left: 0;
     width: 150px;
   }
+
   .modal__addCartHr {
     display: block;
   }
+
   .modal__addQuantity span {
     padding: 5px 15px;
   }
+
   .modal__addQuantity button {
     width: 25px;
     padding: 0;
   }
+
   .modal__totalPrice p {
     font-size: 1rem;
   }

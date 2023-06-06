@@ -16,8 +16,10 @@
   object-fit: cover;
   border-radius: 10px;
 }
+
 .swiper-slide img:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .swiper-button-prev,

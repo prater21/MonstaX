@@ -1,8 +1,9 @@
 .shop__top img {
   width: 100%;
   padding: 0;
-  margin-top: 34px;
+  margin-top: 20px;
 }
+
 .shop__main {
   width: 80%;
   height: 100%;
@@ -10,29 +11,35 @@
   min-width: 1000px;
   max-width: 1400px;
 }
+
 .shop__contents {
   margin-top: 40px;
   margin-bottom: 70px;
 }
+
 .shop__contents h2 {
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
 }
+
 .shop__contents h3 {
   font-size: 1.8rem;
   margin-bottom: 30px;
   text-align: center;
 }
+
 .shop_all {
   width: 100%;
   margin: 0 auto;
 }
+
 .shop_all h3 {
   margin-left: 20px;
   margin-bottom: 30px;
 }
+
 .shop_allItems {
   display: flex;
   width: 100%;
@@ -45,19 +52,24 @@
   margin: 0 auto;
   justify-content: space-between;
 }
+
 .shop_allItems img {
   width: 200px;
   height: 200px;
   border-radius: 10px;
 }
+
 .shop_allItems img:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
+
 .shop__itemPrice {
   margin-left: 10px;
   font-weight: 600;
   font-size: 0.8rem;
 }
+
 .shop__itemTitle {
   margin: 10px 0 5px 10px;
   width: 190px;
@@ -69,6 +81,7 @@
   width: 100%;
   flex: auto;
 }
+
 .modal__alert {
   text-align: center;
   display: flex;
@@ -76,20 +89,24 @@
   font-size: 1.2rem;
   margin: 20px;
 }
+
 @media all and (max-width: 1023px) {
   .shop__main {
     min-width: 85vw;
     width: 95%;
   }
+
   .shop_allItems img {
     width: 130px;
     height: 130px;
   }
+
   .shop_allItems {
     width: 85%;
     gap: 8px;
     justify-content: space-between;
   }
+  
   .shop__itemTitle {
     margin: 10px 0 5px 10px;
     width: 120px;

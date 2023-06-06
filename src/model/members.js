@@ -1,7 +1,6 @@
 /**
  * Member data
  */
-
 function Member(id, stageName, name, position, birth, description, instaID, album, broadcast) {
     this.id = id;
     this.stageName = stageName;

@@ -1,7 +1,6 @@
 /**
  * shop page
  */
-
 import "./Shop.css"
 import SwiperContent from "../Swiper";
 import SHOP_ITEMS from "../../model/shopItems";
@@ -19,21 +18,24 @@ const Shop = () => {
     const onClickHandler = (type, i) => {
         setAddCartItem(SHOP_ITEMS[type][i]);
         setShowModal(true);
-        document.body.style.overflow = "hidden";
+        document.body.style.overflowY = "hidden";
     }
 
     //close modal
     const closeModal = () => {
         setShowModal(false);
+        document.body.style.overflowY = "scroll";
     }
+
     // show notice
     const openAlert = () => {
         setShowAlert(true);
     }
+
     // close notice
     const closeAlert = () => {
         setShowAlert(false);
-        document.body.style.overflow = "scroll";
+        document.body.style.overflowY = "scroll";
     }
 
     return (<div className="shop">

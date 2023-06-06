@@ -14,6 +14,7 @@ const Home = () => {
     const onClickImg = (member) => {
         setShowMem(member);
     }
+    
     const onClickTitle = () => {
         setShowMem('');
     }

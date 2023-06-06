@@ -1,8 +1,6 @@
 /**
  * member description component (home page)
  */
-
-
 import "./Member.css"
 
 const Member = ({ showMem }) => {

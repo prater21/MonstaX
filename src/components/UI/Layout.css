@@ -31,14 +31,14 @@
   left: 90%;
   margin-top: -47px;
   width: 40px;
-cursor: pointer;
+  cursor: pointer;
 }
 .nav__cartIcon{
   font-size: 1.7rem;
 }
 .nav__cartBadge{
   font-size: 0.7rem;
-  margin-top: -35px;
+  margin-top: -34px;
   margin-left: 16px;
   position: sticky;
   background-color: rgb(184, 11, 11);

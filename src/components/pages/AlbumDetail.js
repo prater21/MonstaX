@@ -13,6 +13,7 @@ const AlbumDetail = () => {
     useEffect(() => {
         setAlbum(location.state.album);
     }, [location.state.album]);
+    
     useEffect(() => {
         window.scroll({ top: 0 })
 

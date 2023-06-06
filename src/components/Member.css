@@ -38,10 +38,12 @@
 .home__curMemContent{
  margin: 0 20px;
 }
+
 .home__curMemContent > h2{
   font-size: 1.3rem;
   margin-bottom: 20px;
 }
+
 .home__curMemAlbums,
 .home__curMemBroads {
   display: flex;
@@ -71,17 +73,21 @@
   .home__curMemImg {
     margin: auto;
   }
+
   .home__curmemProfile h1 {
     margin-top: 10px;
     text-align: center;
   }
+
   .home__curmemProfile {
     width: 95%;
     margin: auto;
   }
+
   .home__curMemAlbum img {
     width: 130px;
   }
+  
   .home__curMemBroad img {
     width: 130px;
     height: 180px;

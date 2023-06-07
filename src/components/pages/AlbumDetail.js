@@ -1,7 +1,6 @@
 /**
  * album detail page
  */
-
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./AlbumDetail.css"
@@ -13,7 +12,7 @@ const AlbumDetail = () => {
     useEffect(() => {
         setAlbum(location.state.album);
     }, [location.state.album]);
-    
+
     useEffect(() => {
         window.scroll({ top: 0 })
 

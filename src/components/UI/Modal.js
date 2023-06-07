@@ -1,11 +1,9 @@
 /**
  * Modal Component
  */
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './Modal.css'
-
 
 const Barkdrop = props => {
     return <div className='backdrop' onClick={props.closeModal} />

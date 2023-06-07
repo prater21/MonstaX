@@ -22,7 +22,7 @@ const SwiperContent = (props) => {
                 clickable: true,
             }}
             autoplay={{
-                delay: 2000,
+                delay: props.delay,
                 disableOnInteraction: false,
             }}
             modules={[Navigation, Autoplay]}

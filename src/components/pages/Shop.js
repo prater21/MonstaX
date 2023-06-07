@@ -46,11 +46,11 @@ const Shop = () => {
         <div className="shop__main">
             <div className="shop__contents">
                 <h2>New Arrival</h2>
-                <SwiperContent items="new" onClickHandler={onClickHandler} />
+                <SwiperContent items="new" delay={2000} onClickHandler={onClickHandler} />
             </div>
             <div className="shop__contents">
                 <h2>Best</h2>
-                <SwiperContent items="best" onClickHandler={onClickHandler} />
+                <SwiperContent items="best" delay={1500} onClickHandler={onClickHandler} />
             </div>
             <div className="shop_all">
                 <h3>All Items</h3>

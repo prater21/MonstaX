@@ -1,5 +1,5 @@
 /**
- *  shop items date
+ *  shop item data
  */
 const SHOP_ITEMS = {
     "best": [{

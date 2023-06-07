@@ -1,13 +1,11 @@
 /**
  *  NavBar Component
  */
-
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import "./Navbar.css"
+import "./NavMain.css"
 import { NavLink } from 'react-router-dom';
-
 
 const NavMain = () => {
 
@@ -30,7 +28,6 @@ const NavMain = () => {
                     <NavLink to="/shop" className="nav__link">Shop</NavLink>
                 </Nav>
             </Navbar.Collapse>
-
         </Container>
     </Navbar>
 }

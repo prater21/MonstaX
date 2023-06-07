@@ -7,7 +7,6 @@ import AlbumDetail from './components/pages/AlbumDetail';
 import Shop from './components/pages/Shop';
 
 
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>

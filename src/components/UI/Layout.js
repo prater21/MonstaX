@@ -1,7 +1,10 @@
+/**
+ *  Layout Component
+ */
 import { Outlet, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { IoCartOutline } from "react-icons/io5"; //cart icon
-import NavMain from './Navbar';
+import NavMain from './NavMain';
 import Cart from './Cart';
 import "./Layout.css"
 import { useSelector } from 'react-redux';

@@ -12,6 +12,16 @@ const Cart = (props) => {
     const cartTotalPrice = useSelector(state => state.cart.totalPrice)
     const dispatch = useDispatch();
 
+    //add item quantity
+    const addQuantity = (title) => {
+        dispatch(cartActions.addQuantity({ title }));
+    }
+
+    //sub item quantity
+    const subQuantity = (title) => {
+        dispatch(cartActions.subQuantity({ title }));
+    }
+
     //delete item from cart
     const deleteCartItems = (title) => {
         dispatch(cartActions.deleteItem({ title }));
@@ -32,12 +42,13 @@ const Cart = (props) => {
                                             <p className="cart__itemTitle">{item.title}</p>
                                             <div className="cart__itemQuantity">
                                                 <p >수량 : {item.quantity}</p>
-                                                <button onClick={() => { dispatch(cartActions.subQuantity({ title: item.title })); }}>-</button>
-                                                <button onClick={() => { dispatch(cartActions.addQuantity({ title: item.title })); }}>+</button>
+                                                <button onClick={() => { subQuantity(item.title); }}>-</button>
+                                                <button onClick={() => { addQuantity(item.title); }}>+</button>
                                             </div>
                                             <p className="cart__itemTotalPrice">가격 : {(item.quantity * item.price).toLocaleString()}원</p>
                                         </div>
-                                        <p className="cart__delete" onClick={() => { deleteCartItems(item.title) }}>삭제</p>
+                                        <p className="cart__delete"
+                                            onClick={() => { deleteCartItems(item.title)}}>삭제</p>
                                     </li>
 
                                 ))

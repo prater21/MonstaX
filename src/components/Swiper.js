@@ -26,11 +26,12 @@ const SwiperContent = (props) => {
                 disableOnInteraction: false,
             }}
             modules={[Navigation, Autoplay]}
-            className="mySwiper"
-        >
+            className="mySwiper">
+            
             {SHOP_ITEMS[props.items].map((item, i) => (
                 <SwiperSlide key={item.id}>
-                    <img src={process.env.PUBLIC_URL + `/imgs/shop/${item.imgSrc}`} alt="" onClick={() => { props.onClickHandler(props.items, i) }} />
+                    <img src={process.env.PUBLIC_URL + `/imgs/shop/${item.imgSrc}`} alt=""
+                        onClick={() => { props.onClickHandler(props.items, i) }} />
                 </SwiperSlide>
             ))}
 

@@ -8,7 +8,6 @@ const cartSlice = createSlice({
         totalPrice: 0
     },
     reducers: {
-
         // add item to cart
         addItem(state, action) {
             state.totalPrice += parseInt(action.payload.item.price * action.payload.item.quantity);

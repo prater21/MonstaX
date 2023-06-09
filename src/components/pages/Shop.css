@@ -64,22 +64,17 @@
   cursor: pointer;
 }
 
-.shop__itemPrice {
-  margin-left: 10px;
-  font-weight: 600;
-  font-size: 0.8rem;
-}
-
 .shop__itemTitle {
   margin: 10px 0 5px 10px;
   width: 190px;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
-.shop_allItems::after {
-  content: "";
-  width: 100%;
-  flex: auto;
+.shop__itemPrice {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .modal__alert {

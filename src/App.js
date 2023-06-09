@@ -6,14 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AlbumDetail from './components/pages/AlbumDetail';
 import Shop from './components/pages/Shop';
 
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
-      <Route path='/' element={<Home />} />
-      <Route path='/album' element={<Album />} loader={loader} />
-      <Route path='/album/:id' element={<AlbumDetail />} />
-      <Route path='/shop' element={<Shop />} />
+      <Route index element={<Home />} />
+      <Route path='album' element={<Album />} loader={loader} />
+      <Route path='album/:id' element={<AlbumDetail />} />
+      <Route path='shop' element={<Shop />} />
       <Route path='*' element={<Home />} />
     </Route>
   ), { basename: "/MonstaX" }

@@ -70,6 +70,13 @@
   color: black;
 }
 
+.album__description button:hover{
+  color: white;
+  background-color: gray;
+  border: 1px solid gray;
+
+}
+
 @media all and (max-width: 768px) {
   .mt-1 {
     margin-right: 20px;

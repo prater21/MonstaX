@@ -28,6 +28,7 @@ const Layout = () => {
         setShowCart(true);
         document.body.style.overflow = "hidden";
     }
+
     const closeCart = () => {
         setShowCart(false);
         document.body.style.overflow = "scroll"; 
@@ -50,11 +51,12 @@ const Layout = () => {
             }
 
             <NavMain />
+
             {showCartIcon && <div className='nav__cart'>
                 <IoCartOutline className='nav__cartIcon' onClick={openCart} />
                 {cartItems.length !== 0 && <div className='nav__cartBadge'>{cartItems.length}</div>}
             </div>}
-            {showCart && <Cart closeCart={closeCart} ></Cart>}
+            {showCart && <Cart closeCart={closeCart} />}
 
             <div className='body__container'>
                 <Outlet />

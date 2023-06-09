@@ -1,8 +1,29 @@
 .albumDetail {
   width: 80%;
   margin: 0 auto;
-  margin-top: 50px;
   max-width: 1000px;
+}
+
+.albumDetail__goBack {
+  text-decoration: none;
+  cursor: pointer;
+  margin: 20px 0 40px;
+  width: 25px;
+  display: block;
+}
+
+.albumDetail__goBack p {
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.245);
+  font-size: 1.2rem;
+  color: rgb(23, 23, 23);
+}
+
+.albumDetail__goBack p:hover {
+  background-color: rgba(0, 0, 0, 0.489);
+  color: rgb(23, 23, 23);
 }
 
 .albumDetail h3 {
@@ -109,7 +130,7 @@
   .albumDetail__main {
     flex-direction: column;
   }
-  
+
   .albumDetail__main > img {
     width: 60%;
     height: 60%;
@@ -123,7 +144,7 @@
   .albumDetail__mainDetail hr {
     display: none;
   }
-  
+
   .albumDetail__icons {
     display: flex;
   }

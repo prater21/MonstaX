@@ -12,6 +12,7 @@ const HomeMain = () => {
             M.net의 리얼리티 서바이벌 프로그램 노머시(NO.MERCY)를 통해 화려한 데뷔전을 치르며, 실력을 검증받았다.
             거친 힙합 에너지와 비글미로 기존의 남자 아이돌과는 다른 차별화된 매력을 어필하며 국내외 팬들의 마음을 사로잡는데 성공했다.
         </article>
+
         <div className="home__div">
             <h2> Recent Album</h2>
             <div className="home__albums">
@@ -45,6 +46,7 @@ const HomeMain = () => {
                 </div>
             </div>
         </div>
+        
         <div className="home__div">
             <h2>Youtube</h2>
             <div className="home__youtubes">

@@ -17,10 +17,9 @@ const Album = () => {
             setshowAlbums(albums);
         }
         else {
-            let result = albums.filter(value => value.types === item);
+            const result = albums.filter(value => value.types === item);
             setshowAlbums(result);
         }
-
     }
 
     useEffect(() => {
@@ -28,18 +27,15 @@ const Album = () => {
         setshowAlbums(_album);
     }, [_album])
 
-    useEffect(() => {
-
-    }, [showAlbums])
-
+    
     return (
         <div className="album">
             <h1 className="album__title">Album</h1>
             <div className="album__btn">
                 <DropdownButton id="dropdown-basic-button" variant="secondary" className="mt-1" title="types " onSelect={(item) => { onSetTypes(item); }}>
-                    <Dropdown.Item eventKey="all" >전체보기 (All)</Dropdown.Item>
-                    <Dropdown.Item eventKey="FULL" >정규앨범 (Full Ablum)</Dropdown.Item>
-                    <Dropdown.Item eventKey="EP" >미니앨범 (EP)</Dropdown.Item>
+                    <Dropdown.Item eventKey="all">전체보기 (All)</Dropdown.Item>
+                    <Dropdown.Item eventKey="FULL">정규앨범 (Full Ablum)</Dropdown.Item>
+                    <Dropdown.Item eventKey="EP">미니앨범 (EP)</Dropdown.Item>
                 </DropdownButton>
             </div>
 
@@ -52,7 +48,7 @@ const Album = () => {
                                 <div className="album__description">
                                     <h2>{album.title}</h2>
                                     <p>{album.release}</p>
-                                    <Link to={album.id} state={{ album: album }}>
+                                    <Link to={album.id} state={{ album}}>
                                         <button>Detail</button>
                                     </Link>
                                 </div>
@@ -62,7 +58,7 @@ const Album = () => {
                                 <div className="album__description">
                                     <h2>{album.title}</h2>
                                     <p>{album.release}</p>
-                                    <Link to={album.id} state={{ album: album }}>
+                                    <Link to={album.id} state={{ album }}>
                                         <button>Detail</button>
                                     </Link>
                                 </div>
@@ -70,7 +66,6 @@ const Album = () => {
                             </li>
                     })}
                 </ul>}
-
         </div >
     )
 }

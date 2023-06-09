@@ -17,10 +17,10 @@ const ModalOverlay = props => {
     )
 }
 
-const Modal = props => {
+const Modal = (props) => {
     return <React.Fragment>
         {ReactDOM.createPortal(<Barkdrop closeModal={props.closeModal} />, document.getElementById('overlays'))}
-        {ReactDOM.createPortal(<ModalOverlay>{props.children} </ModalOverlay>, document.getElementById('overlays'))}
+        {ReactDOM.createPortal(<ModalOverlay>{props.children}</ModalOverlay>, document.getElementById('overlays'))}
     </React.Fragment>
 }
 

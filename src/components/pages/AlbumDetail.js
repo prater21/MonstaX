@@ -1,7 +1,7 @@
 /**
  * album detail page
  */
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./AlbumDetail.css"
 
@@ -17,17 +17,24 @@ const AlbumDetail = () => {
         window.scroll({ top: 0 })
 
     }, [])
+
     const goToHandler = (link) => {
         window.open(link);
     }
+
     return <>
         {album && < div className="albumDetail" >
+            <Link to='/album' className="albumDetail__goBack">
+                <p >&larr;</p>
+            </Link>
             <div className="albumDetail__main">
                 <img src={process.env.PUBLIC_URL + `/imgs/albums/${album.id}.jpeg`} alt="" />
+
                 <div className="albumDetail__mainDetail">
                     <h2>{album.title}</h2>
                     <p>발매일 : {album.release}</p>
                     <hr className="albumDetail__hr" />
+
                     <div className="albumDetail__icons">
                         <div className="albumDetail__icon">
                             <img src={process.env.PUBLIC_URL + "/imgs/icon/youtubemusicIcon.png"} onClick={() => { goToHandler(album.links.youtubeMusic) }} alt="" />
@@ -60,10 +67,9 @@ const AlbumDetail = () => {
                 <ul className="albumDetail__tracks">
                     {album.tracks?.map((track, index) => (
                         <li className="albumDetail__track" key={track.title}>
-                            <p className="albumDetail__trackTitle">{track.title}</p>
+                            <p className="albumDetail__trackTitle">{index + 1}. {track.title}</p>
                         </li>
                     ))}
-
                 </ul>
             </div>
 
@@ -75,6 +81,7 @@ const AlbumDetail = () => {
                     <iframe src={album.youtube.mv} width="320" height="180" title={album + "mv"} frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             }
+
             {album.youtube.related?.src &&
                 // related video
                 <div className="albumDetail__contents">

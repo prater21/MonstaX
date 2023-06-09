@@ -12,11 +12,11 @@ import ItemDetail from "../ItemDetail";
 const Shop = () => {
     const [showModal, setShowModal] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
-    const [addCartItem, setAddCartItem] = useState({ title: "", price: 0, quantity: 0 });
+    const [selectedItem, setSelectedItem] = useState({ title: "", price: 0, quantity: 0 });
 
-    // show item detail
-    const onClickHandler = (type, i) => {
-        setAddCartItem(SHOP_ITEMS[type][i]);
+    //show item detail
+    const showItemDetail = (type, i) => {
+        setSelectedItem(SHOP_ITEMS[type][i]);
         setShowModal(true);
         document.body.style.overflowY = "hidden";
     }
@@ -43,21 +43,24 @@ const Shop = () => {
         <div className="shop__top">
             <img src={process.env.PUBLIC_URL + `/imgs/shop/shop-top-img.jpg`} alt="" />
         </div >
+
         <div className="shop__main">
             <div className="shop__contents">
                 <h2>New Arrival</h2>
-                <SwiperContent items="new" delay={2000} onClickHandler={onClickHandler} />
+                <SwiperContent items="new" delay={2000} onClickHandler={showItemDetail} />
             </div>
+
             <div className="shop__contents">
                 <h2>Best</h2>
-                <SwiperContent items="best" delay={1500} onClickHandler={onClickHandler} />
+                <SwiperContent items="best" delay={1500} onClickHandler={showItemDetail} />
             </div>
+
             <div className="shop_all">
                 <h3>All Items</h3>
                 <ul className="shop_allItems">
                     {
                         SHOP_ITEMS["all"].map((item, i) => (
-                            <li className="shop_allItem" onClick={() => { onClickHandler("all", i) }} key={item.id}>
+                            <li className="shop_allItem" onClick={() => { showItemDetail("all", i) }} key={item.id}>
                                 <img src={process.env.PUBLIC_URL + `/imgs/shop/${item.imgSrc}`} alt="" />
                                 <p className="shop__itemTitle">{item.title}</p>
                                 <p className="shop__itemPrice">{item.price.toLocaleString()}원</p>
@@ -69,7 +72,8 @@ const Shop = () => {
             </div>
 
             {/* // show item detail */}
-            {showModal && <ItemDetail addCartItem={addCartItem} closeModal={closeModal} showAlert={openAlert} />}
+            {showModal && <ItemDetail selectedItem={selectedItem} closeModal={closeModal} showAlert={openAlert} />}
+            
             {showAlert &&
                 // show notice
                 <Modal closeModal={closeAlert}>

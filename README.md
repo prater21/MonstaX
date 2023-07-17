@@ -33,3 +33,10 @@ Website about k-pop boy group "Monsta X"
 - [Firebase Realtime Database](https://firebase.google.com/docs/database)
 - [React Bootstrap](https://react-bootstrap.github.io/)
 - [Swiper](https://swiperjs.com/react)
+
+## Getting Started
+
+```
+npm install
+npm start
+```
